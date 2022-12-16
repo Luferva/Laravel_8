@@ -12,14 +12,15 @@
 
     <!-- Link CSS Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <a href="/" class="navbar-brand">Projeto</a>
+            <div class="collapse navbar-collapse" id="navbar">
+                <a href="/" class="navbar-brand"><img src="img/hdcevents_logo.svg" alt="HDC Events"></a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="/" class="nav-link">Eventos</a>
