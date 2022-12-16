@@ -4,28 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
+use App\Models\Event;
 
 class EventController extends Controller
 {
-    //
-
+    
     public function index(){
 
-        $nome = "Luiz";
-        $idade = 29;
+       $events = Event::all();
 
-        $arr = [10,20,30,40];
-
-        $nomes = ["Luiz", "Fernando", "Ribeiro", "Vargas"];
-
-        return view('welcome',
-        [
-            'nome' => $nome,
-            'idade2' => $idade,
-            'profissao' => "Programador",
-            'arr' => $arr,
-            'nomes' => $nomes
-        ]);
+       return view('welcome', ['events'=> $events]);
     }
 
     public function create(){

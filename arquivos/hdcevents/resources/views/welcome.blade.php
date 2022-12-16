@@ -4,11 +4,8 @@
 
 @section ('content')
 
-<h1>Algum titulo</h1>
-
-@if(10 > 5)
-    <p>A condição é verdadeira</p>
-@endif
-
+@foreach($events as $event)
+    <p>{{$event->title}} -- {{$event->description}}</p>
+@endforeach
 
 @endsection
