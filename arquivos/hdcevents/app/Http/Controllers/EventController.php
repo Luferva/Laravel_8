@@ -31,7 +31,7 @@ class EventController extends Controller
     }
 
     public function store(Request $request){
-        
+
         $event = new Event;
 
         $event->title = $request->title;
@@ -41,7 +41,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg','Evento criado com sucesso!');
     }
    
 
