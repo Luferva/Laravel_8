@@ -184,12 +184,12 @@
     margin: 20px 0;
   }
   
-  #items-list {
+  #itens-list {
     list-style: none;
     padding-left: 0;
   }
   
-  #items-list li {
+  #itens-list li {
     display: flex;
   }
   
@@ -207,4 +207,3 @@
   footer p {
     margin-bottom: 0;
   }
-  
