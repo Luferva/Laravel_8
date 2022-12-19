@@ -40,10 +40,12 @@ class EventController extends Controller
         $event = new Event;
 
         $event->title = $request->title;
-        $event->description = $request->description;
         $event->city = $request->city;
         $event->private = $request->private;
-
+        $event->description = $request->description;
+        $event->itens = $request->itens;
+        
+        
         //image upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
 

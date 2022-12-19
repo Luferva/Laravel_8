@@ -15,8 +15,14 @@
             <p class="event-participants"><ion-icon name="people-outline"></ion-icon> Xparticipantes</p>
             <p class="event-ower"><ion-icon name="star-outline"></ion-icon> Dono do evento</p>
             <a href="#" class="btn btn-primary" id="event-submit"> Confirmar presença</a>
+            <h3>O evento conta com:</h3>
+            <ul id="itens-list">
+                @foreach($event->itens as $iten)
+                    <li><ion-icon name="play-outline"></ion-icon><span>{{ $iten}}</span></li>
+                @endforeach
+            </ul>
         </div>
-        <div class="col-md-12" id="descripition-container">
+        <div class="col-md-12" id="description-container">
             <h3>Sobre o evento:</h3>
             <p class="event-description">{{$event->description}}</p>
 
