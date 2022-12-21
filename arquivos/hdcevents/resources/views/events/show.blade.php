@@ -20,6 +20,8 @@
                 <p class="event-ower">
                     <ion-icon name="star-outline"></ion-icon> {{ $eventOwner['name'] }}
                 </p>
+                
+                @if(!$hasUserJoined)
                 <form action="/events/join/{{ $event->id }}" method="POST">
                     @csrf
                     <a href="/events/join/{{ $event->id}}" 
@@ -30,6 +32,9 @@
                         Confirmar Presença
                     </a>
                 </form>
+                @else
+                    <p class="already-joined-msg">Você já esta participando deste evento!</p>
+                @endif
                 <h3>O evento conta com:</h3>
                 <ul id="itens-list">
                     @foreach ($event->itens as $iten)
