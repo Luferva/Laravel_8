@@ -23,7 +23,7 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $fillable = [
+    protected $fillable = [ // fillable define quais as colunas da minha tabela que pode ser preenchidas 
         'name',
         'email',
         'password',

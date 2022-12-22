@@ -15,11 +15,11 @@ class EventController extends Controller
         $search = request('search');
 
         if($search){
-            $events = Event::where([
+            $events = Event::where([ // where() serve para pesquisar no DB etrazer de volta quando for igual o parametro informado. Equivalente a "select *all where like 'search' 
                 ['title', 'like', '%' .$search. '%']
             ])->get();
         }else{
-            $events = Event::all();
+            $events = Event::all(); // all() serve para trazer todos(collection) os registros do banco de dados
         }
 
         return view('welcome', ['events' => $events, 'search' => $search]);
@@ -79,7 +79,7 @@ class EventController extends Controller
 
     public function show($id){
 
-        $event = Event::findOrFail($id);
+        $event = Event::findOrFail($id);// find() serve para pegar somente UM registro no banco de dados 
 
         //Para verificar se o usuário já esta participando desse evento
         $user = auth()->user();
